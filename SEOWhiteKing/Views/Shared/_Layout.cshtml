@@ -6,12 +6,17 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        @* @await Html.PartialAsync("_HeaderPartial") *@
+    <header class="header">
+        @await Html.PartialAsync("_HeaderPartial")
+    </header>
 
+    <main class="main">
         @RenderBody()
+    </main>
+
+    <footer class="footer">
 
         @* @await Html.PartialAsync("_ScriptsPartial") *@
-    </div>
+    </footer>
 </body>
 </html>

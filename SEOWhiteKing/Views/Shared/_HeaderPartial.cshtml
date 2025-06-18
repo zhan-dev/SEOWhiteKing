@@ -1,25 +1,45 @@
-﻿<header>
-    <div>
-        <img src="" alt="SEO.WhiteKing logo" />
-        <div>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
+﻿@inject IConfiguration Configuration
+@{
+    AppSettings? appSettings = Configuration.GetSection("Project").Get<AppSettings>();
+}
+
+<section class="head">
+    <div class="menu wrapper">
+
+        <div class="menu-logo">
+            <img src="~/img/logo/Logo.png" alt="SEO.WhiteKing logo" />
         </div>
+
+        <div class="menu-sidebar">
+            <nav class="menu-sidebar-nav">
+                <ul class="menu-sidebar-nav-list">
+                    <li class="menu-sidebar-nav-list_item"><a href="#">Home</a></li>
+                    <li class="menu-sidebar-nav-list_item"><a href="#">About Us</a></li>
+                    <li class="menu-sidebar-nav-list_item"><a href="#">What We Do</a></li>
+                    <li class="menu-sidebar-nav-list_item"><a href="#">Our Blog</a></li>
+                    <li class="menu-sidebar-nav-list_item"><a href="#">Testimonials</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-sidebar_phone button">
+                @(ViewBag.Phone ?? @appSettings?.Company?.CompanyPhone)
+            </button>
+        </div>
+
+    </div>
+    
+    <div class="info wrapper">
+        <h1>Your Business <br /> Win Online</h1>
+        <p>
+            A top-of-the-line SEO agency can help you increase site traffic, conversions, and ROI
+        </p>
         <div>
-            <a href="#"></a>
+            <button>Work With Us</button>
+            <div>
+                <img src="" alt="" />
+                <button>Who We Are</button>
+            </div>
         </div>
     </div>
+</section>
 
-    <div>
-
-    </div>
-</header>
-
-<h1>заголовок</h1>
-<h2>заголовок</h2>
-<h3>заголовок</h3>
-<h4>заголовок</h4>
-<h5>заголовок</h5>

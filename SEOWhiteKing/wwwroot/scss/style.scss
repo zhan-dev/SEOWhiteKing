@@ -1,7 +1,104 @@
-* {
-    box-sizing: border-box;
+/*colors*/
+$text-color-dark: #091e42;
+$text-color-light: #ffffff;
+$text-color-gray-dark: #3c3c3c;
+$text-color-gray-light: #9ea7b8;
+$hover-color-gray: #42526e;
+$links-color: #3e6dd9;
+$icons-metric-color: #003ecd;
+$icons-contact-color: #1079c8;
+$icons-social-color: #01d4ed;
+$icons-provided-color: #253858;
+
+/*basic settings*/
+html {
+    font-family: 'Helvetica LT Std', sans-serif;
+    font-size: 10px;
 }
 
-body {
+/*typography*/
+section{
+    /*padding: 100px 0;*/
+}
 
+/*buttons*/
+.button {
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 200px;
+}
+
+.head {
+    /*for fixed menu positioning*/
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;*/
+    /*height: 1040px;*/
+    background-image: url(../img/background/headerBackground.png), url(../img/background/headerBackgroundRectangle.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, top right;
+    background-size: 98% auto, auto auto;
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+
+        &-logo {
+        }
+
+        &-sidebar {
+            font-size: 16px;
+            font-weight: bold;
+
+            &-nav {
+                display: inline-block;
+
+                &-list {
+                    display: flex;
+
+                    &_item {
+                        margin-right: 40px;
+
+                        & > a {
+                            color: $text-color-light;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            &_phone {
+                background-color: $text-color-light;
+                color: $text-color-dark;
+                border: none;
+                border-bottom-right-radius: 0;
+                padding: 15px 30px;
+            }
+        }
+    }
+
+    .info {
+        margin-top: 200px;
+        /*margin-bottom: 300px;*/
+        color: $text-color-light;
+
+        h1 {
+            font-size: 76px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 30px;
+            max-width: 560px;
+        }
+    }
 }
