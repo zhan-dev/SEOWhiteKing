@@ -1,4 +1,4 @@
-/*colors*/
+﻿/*colors*/
 $text-color-dark: #091e42;
 $text-color-light: #ffffff;
 $text-color-gray-dark: #3c3c3c;
@@ -29,10 +29,17 @@ section{
     border: none;
 }
 
-.wrapper{
+.headerwrapper {
     max-width: 1920px;
     margin: 0 200px;
 }
+
+.wrapper{
+    max-width: 1920px;
+    margin: 0 280px;
+}
+
+
 
 .head {
     /*for fixed menu positioning*/
@@ -134,6 +141,7 @@ section{
     margin-top: 60px;
 
     h2 {
+        color: $text-color-dark;
         text-align: center;
         font-size: 46px;
         font-weight: bold;
@@ -141,7 +149,7 @@ section{
 
     &-content {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         justify-items: center;
 
         &-card {
@@ -159,6 +167,7 @@ section{
 
             &_text {
                 h4 {
+                    color: $text-color-dark;
                     font-size: 24px;
                     font-weight: bold;
                     margin-bottom: 40px;
@@ -172,5 +181,148 @@ section{
             }
         }
     }
+}
+
+.statistic {
+    > img {
+        margin: 100px auto 70px auto;
+        display: block;
+    }
+
+    &-block {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+        &-info {
+
+            /*&:not(:last-child) {*/
+                .statistic-block-info_number::after {
+                    content: "";
+                    display: inline-block;
+                    width: 3px;
+                    height: 51px;
+                    margin-left: 70px;
+                    margin-right: -73px;
+                    background-image: url('../img/statisticCount/verticalDivider.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                }
+            /*}*/
+
+
+            &_img {
+                width: 40px;
+                height: 40px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+
+            &_number {
+                font-size: 46px;
+                font-weight: bold;
+                color: $icons-metric-color;
+                line-height: 46px;
+            }
+
+            &_text {
+                margin-top: 10px;
+                display: block;
+                text-transform: uppercase;
+                font-size: 18px;
+                color: $icons-metric-color;
+            }
+        }
+    }
+}
+
+.ourService {
+    background-image: url("../img/WhyOurService/ourServiceLayer.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    div {
+
+        h2 {
+            color: $text-color-dark;
+            padding-top: 200px;
+            font-size: 46px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+
+    &-block {
+        margin-top: 70px;
+        display: flex;
+        /*flex-wrap: wrap;*/
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        &_video {
+            width: 54%;
+            text-align: right;
+
+            iframe {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+            }
+        }
+
+        &_text {
+            width: 46%;
+            color: $text-color-dark;
+            font-size: 20px;
+            font-weight: 500;
+            font-style: normal;
+
+            ol {
+
+                li {
+                    margin-bottom: 10px;
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 16px; /* ширина стрелки */
+                        height: 16px; /* высота стрелки */
+                        margin-right: 15px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        vertical-align: middle;
+                        background-image: url('../img/WhyOurService/Arrow.png');
+                    }
+                }
+            }
+        }
+    }
+}
+
+.googlePartner{
+
+}
+
+.clientsLove{
+
+}
+
+.happyClients{
+
+}
+
+.talkToUs{
+
+}
+
+.devForYou{
+
+}
+
+.footerInfo{
+
 }
 
