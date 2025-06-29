@@ -1,4 +1,5 @@
-﻿/*colors*/
+﻿@charset "UTF-8";
+/*colors*/
 /*basic settings*/
 html {
   font-family: "Helvetica LT Std", sans-serif;
@@ -17,9 +18,14 @@ section {
   border: none;
 }
 
-.wrapper {
+.headerwrapper {
   max-width: 1920px;
   margin: 0 200px;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 280px;
 }
 
 .head {
@@ -106,13 +112,14 @@ section {
   margin-top: 60px;
 }
 .provided h2 {
+  color: #091e42;
   text-align: center;
   font-size: 46px;
   font-weight: bold;
 }
 .provided-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
 }
 .provided-content-card {
@@ -128,6 +135,7 @@ section {
   height: 65px;
 }
 .provided-content-card_text h4 {
+  color: #091e42;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 40px;
@@ -136,4 +144,101 @@ section {
   font-size: 20px;
   font-weight: 300;
   line-height: 35px;
+}
+
+.statistic > img {
+  margin: 100px auto 70px auto;
+  display: block;
+}
+.statistic-block {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.statistic-block-info {
+  /*&:not(:last-child) {*/
+  /*}*/
+}
+.statistic-block-info .statistic-block-info_number::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 51px;
+  margin-left: 70px;
+  margin-right: -73px;
+  background-image: url("../img/statisticCount/verticalDivider.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+.statistic-block-info_img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.statistic-block-info_number {
+  font-size: 46px;
+  font-weight: bold;
+  color: #003ecd;
+  line-height: 46px;
+}
+.statistic-block-info_text {
+  margin-top: 10px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #003ecd;
+}
+
+.ourService {
+  background-image: url("../img/WhyOurService/ourServiceLayer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.ourService div h2 {
+  color: #091e42;
+  padding-top: 200px;
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+}
+.ourService-block {
+  margin-top: 70px;
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.ourService-block_video {
+  width: 54%;
+  text-align: right;
+}
+.ourService-block_video iframe {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.ourService-block_text {
+  width: 46%;
+  color: #091e42;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+}
+.ourService-block_text ol li {
+  margin-bottom: 10px;
+}
+.ourService-block_text ol li:before {
+  content: "";
+  display: inline-block;
+  width: 16px; /* ширина стрелки */
+  height: 16px; /* высота стрелки */
+  margin-right: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-image: url("../img/WhyOurService/Arrow.png");
 }
